@@ -1,10 +1,16 @@
 package com.example.cancel_button
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.cancel_button.tag as tag
+
+object tag {
+
+}
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,4 +23,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+
+    fun myClickHandler(view: View) {
+
+        Log.i(tag: "MainActivity"; msg: "Button Clicked")
+
+    }
+
+
 }
