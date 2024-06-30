@@ -1,16 +1,10 @@
 package com.example.cancel_button
 
-import android.os.Bundle
-import android.view.View
-import androidx.activity.enableEdgeToEdge
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.cancel_button.tag as tag
-
-object tag {
-
-}
+import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +18,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun myClickHandler(view: View) {
-
-        Log.i(tag: "MainActivity"; msg: "Button Clicked")
-
+    fun myClickHandlerandler(view: View) {
+        Log.i("MainActivity","button clicked")
+        //  var dialIntent:Intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:987654398765"))
+        var webIntent:Intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://www.yahoo.com"))
+        startActivity(webIntent)
     }
 
 
